@@ -44,7 +44,7 @@ export default function Nav() {
             <rect y="4" width="7.33333" height="4.4" rx="2" fill="#21B6B7" />
           </svg>
               </Link>
-              <button className={styles.themeSwitcher} onClick={switchTheme} >
+              <button className={styles.themeSwitcher} onClick={switchTheme} aria-label="Brightness Rounded"  >
                 <Brightness6Rounded />
               </button>
         </div>

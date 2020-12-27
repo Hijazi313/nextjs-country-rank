@@ -57,7 +57,7 @@ export default function CountriesTable({countries}){
             Countries
             <div className={styles.heading} >
                 <button className={styles.h_name} onClick={()=> setValueandDir('name')}  >
-                    name
+                    Name
                     {value==="name" && <SortArrow dir={dir}  />}
 
                 </button>
@@ -80,7 +80,7 @@ export default function CountriesTable({countries}){
                     <div className={styles.row}>
 
                         <div className={styles.flag}>
-                            <Image src={country.flag} width="100%" height="100%" />
+                            <Image src={country.flag} width="100%" height="100%" alt={`${country.name} flag`} />
                         </div>
                         <div className={styles.name}>{country.name}</div>
                         <div className={styles.population}>{country.population}</div>
