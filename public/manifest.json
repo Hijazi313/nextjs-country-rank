@@ -1,0 +1,12 @@
+{
+    "name":"World Country Rank Checker",
+    "short_name":"Country Rank",
+    "start_url":"/",
+    "background_color": "#004740",
+    "theme_color": "#ffffff",
+    "scope":".",
+    "display":"standalone",
+    "description":"world counties rank checker",
+    "dir":"ltr",
+    "lang":"en-US"
+}

@@ -1,0 +1,21 @@
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.themeSwitcher {
+  border: none;
+  background-color: transparent;
+
+  color: var(--text-color-secondary);
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
