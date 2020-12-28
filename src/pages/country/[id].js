@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Head from "next/head";
 import getCountry from "../../lib/country";
 
 import styles from "./country.module.css";
@@ -20,6 +21,11 @@ export default function country({country}){
 getBorders();
     },[])
     return (
+        <>
+        <Head>
+        <meta name="description" content={`information about the population, area , happiness index neighbouring countries, region and subregion of ${name}`} />
+
+        </Head>
         <Layout title={name} >
             <div className={styles.container} >
                 <div  className={styles.container_left}>
@@ -84,13 +90,14 @@ getBorders();
             </div>
             </div>
         </Layout>
+</>
     )   
 }
 
 
 export async function getServerSideProps({params}){
     const res = await getCountry(params.id)
-
+    
     return {
         props:{
             country:res
