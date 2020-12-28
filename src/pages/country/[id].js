@@ -1,12 +1,12 @@
-import axios from "axios";
 import Image from "next/image";
+import getCountry from "../../lib/country";
 
 import styles from "./country.module.css";
 
 import Layout from "../../components/Layout";
 import { useEffect, useState } from "react";
 
-const getCountry = async (id) => await (await axios.get(`https://restcountries.eu/rest/v2/alpha/${id}`)).data
+
 
 export default function country({country}){
     const [borders, setBoarders] = useState([])
