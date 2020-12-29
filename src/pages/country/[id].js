@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Head from "next/head";
+import axios from "axios";
 import getCountry from "../../lib/country";
 
 import styles from "./country.module.css";
@@ -12,6 +13,8 @@ import { useEffect, useState } from "react";
 export default function country({country}){
     const [borders, setBoarders] = useState([])
     const {area,capital,subregion, name, population, flag, region, languages, currencies,gini, nativeName, borders :cborders} = country
+    
+
     const getBorders = async ()=>{
         const borders = await Promise.all(cborders.map(c =>  getCountry(c)))
         setBoarders(borders)
@@ -95,11 +98,22 @@ getBorders();
 }
 
 
-export async function getServerSideProps({params}){
-    const res = await getCountry(params.id)
-    
+export async function getStaticPaths(){
+    const con= await (await axios.get("https://restcountries.eu/rest/v2/all")).data;
+      const paths = con.map((country) => `/country/${country.alpha3Code}`)
     return {
-        props:{
+            paths,
+            fallback: false
+        }
+}
+
+
+export async function getStaticProps({params}){
+
+    const res = await getCountry(params.id);
+  
+    return {
+        props: {
             country:res
         }
     }
