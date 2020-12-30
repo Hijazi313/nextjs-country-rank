@@ -6,7 +6,30 @@
     "theme_color": "#ffffff",
     "scope":".",
     "display":"standalone",
-    "description":"world counties rank checker",
+    "description":"A simple world counties rank checker",
     "dir":"ltr",
-    "lang":"en-US"
+    "lang":"en-US",
+    "icons":[
+        {
+            "src":"/images/icons/icon-192x192.png",
+            "type":"image/png",
+            "sizes":"192x192"
+        },
+        {
+            "src":"/images/icons/icon-256x256.png",
+            "type":"image/png",
+            "sizes":"256x256"
+        },
+        {
+            "src":"/images/icons/icon-348x348.png",
+            "type":"image/png",
+            "sizes":"348x348"
+        },
+        {
+            "src":"/images/icons/icon-512x512.png",
+            "type":"image/png",
+            "sizes":"512x512"
+        }
+    ],
+    "orientation":"portrait-primary"
 }

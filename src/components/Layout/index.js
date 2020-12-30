@@ -11,6 +11,9 @@ export default function Layout({children, title}){
                 <Head>
                     <title>{title}</title>
                     <link rel="icon" href="/favicon.ico" /> 
+                    <meta name="apple-mobile-web-app-title" content={title} />
+                    <meta property='og:title' content={title} />
+
                 </Head>
                 <Nav />
                 <main className={styles.container} >
